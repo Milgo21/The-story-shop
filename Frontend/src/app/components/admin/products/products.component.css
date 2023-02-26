@@ -1,1 +1,13 @@
-
+tr{
+  background-color: wheat;
+}
+button{
+  border: none;
+  background-color: cadetblue;
+  padding: 0.5rem;
+  color: aliceblue;
+  border-radius: 3px;
+}
+td{
+  padding: 10px;
+}

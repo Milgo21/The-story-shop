@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+  width: 98vw;
+}
+.sidebar{
+  height: 90vh;
+  width: 20%;
+  padding: 1.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.story{
+  background-color: #3A98B9;
+}
+.left{
+  width: 100%;
+  background-color: #3A98B9;
+}
+.left-tabledata{
+  padding: 8rem;
+}
+table{
+  width: 100%;
+}
+tr{
+  background-color: wheat;
+}
+.left-carousel{
+  display: flex;
+  justify-content: space-evenly;
+}
+.orders-card,.customers-card,.products-card{
+  height: 8rem;
+  width: 20%;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.orders-card:hover,.customers-card:hover,.products-card:hover{
+  cursor: pointer;
+  background-color: burlywood;
+}

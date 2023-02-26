@@ -1,1 +1,15 @@
-<p>products works!</p>
+<table >
+  <th>Book title</th>
+  <th>Author</th>
+  <th>Description</th>
+  <th>Price</th>
+  <th>Actions</th>
+  <tr *ngFor="let b of Books" class="book">
+    <td>{{b.booktitle}}</td>
+    <td>{{b.author}}</td>
+    <td>{{b.description}}</td>
+    <td>{{b.price | currency}}</td>
+    <td class="td-btn"><button>Delete</button></td>
+  </tr>
+
+</table>

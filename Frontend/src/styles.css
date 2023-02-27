@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }/* You can add global styles to this file, and also import other style files */
+=======
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+>>>>>>> d7dc0564ae00520fb8e591219cd6c1782e981fc9

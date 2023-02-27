@@ -1,0 +1,17 @@
+
+<div class="container">
+
+  <div class="slider" >
+    <div class="leftarrow" (click)="goToPrevious()"><</div>
+    <div class="slide"style="width: 300px;height:200px;margin:0 auto" [ngStyle]="{'background-image':getCurrentSlide()} ">
+      <div class="dots-container" *ngFor="let s of slides; let slideIndex = index" (click)="goToSlide(slideIndex)">.</div>
+    </div>
+    <div class="rightarrow" (click)= "goToNext()" >></div>
+  </div>
+</div>
+
+
+  <ng-image-slider [images]="slides" #nav></ng-image-slider>
+
+
+<!-- <img src="../../../assets/icons/book.png" alt="" srcset=""> -->

@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.slider{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.rightarrow,.leftarrow{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: azure;
+  font-size: 45px;
+  cursor: pointer;
+}
+.slide{
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  font-size: 50px;
+  color: coral;
+}
+.dots-container{
+  cursor: pointer;
+}
+
+

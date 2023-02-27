@@ -1,7 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-slider',
+  selector: 'app-addproduct',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })

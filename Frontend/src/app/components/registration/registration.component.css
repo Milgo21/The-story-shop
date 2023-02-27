@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#woman {
+    width: 400px;
+    height: 520px;
+    border-radius: 10px;
+}
+
+span {
+    color: red;
+}
+
+.maincontainer {
+    width: 98vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.top {
+    text-align: center;
+}
+
+/* .formDiv {
+    width: 400px;
+    height: 445px;
+    background-color: rgba(218, 204, 189, 255);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 10px;
+
+} */
+.form {
+    background-color: white;
+    padding: 40px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    /* height: 460px; */
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    /* padding: 40px; */
+    margin-bottom: 10px;
+
+}
+
+
+.register {
+    padding: 20px;
+    border-radius: 10px;
+    border-color: transparent;
+    color: black;
+    background-color: rgba(185, 201, 255, 255);
+}
+
+.alternative {
+    text-align: center;
+
+}
+
+
+input,
+select {
+    padding: 10px;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.invalid {
+    background-color: rgba(185, 201, 255, 255);
+}
+
+.valid {
+    background-color: cadetblue;
+}

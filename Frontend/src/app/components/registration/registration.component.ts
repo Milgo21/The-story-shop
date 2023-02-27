@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.css']
 })
@@ -28,3 +31,4 @@ export class RegistrationComponent implements OnInit {
 
 
 }
+

@@ -1,11 +1,12 @@
 * {
     padding: 0px;
     margin: 0px;
-    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
+
 #woman {
-    width: 400px;
-    height: 520px;
+    width: 350px;
+    height: 470px;
     /* border-radius: 10px; */
 }
 
@@ -14,22 +15,27 @@ span {
 }
 
 .maincontainer {
-    width: 98vw;
+    /* width: 98vw;*/
     height: 100vh;
-    background-color: red;
+    background-color: rgba(185, 201, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
+a{
+    color: black;
+}
 
 .content {
-    background-color: aqua;
+    width: 70vw;
+    height: 80vh;
+    margin: auto 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 1rem; */
 }
 
 h2 {
@@ -41,19 +47,18 @@ h2 {
     text-align: center;
 }
 
-/* .formDiv {
+.formDiv {
+    background-color: white;
+    padding: 30px;
     width: 400px;
-    height: 445px;
-    background-color: rgba(218, 204, 189, 255);
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    border-radius: 10px;
+    /* height: 460px; */
+}
 
-} */
-.form {
+/* .form {
     background-color: white;
     padding: 40px;
     width: 400px;
@@ -61,11 +66,12 @@ h2 {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    /* height: 460px; */
+    height: 460px;
 
-}
-#logo{
+} */
+#logo {
     width: 300px;
+    font-size: 900;
 }
 
 .form-group {
@@ -78,13 +84,20 @@ h2 {
 
 }
 
+#forgotpassword {
+    text-align: end;
+}
 
 .login {
-    padding: 20px;
+    padding: 12px;
     border-radius: 10px;
     border-color: transparent;
     color: black;
     background-color: rgba(185, 201, 255, 255);
+}
+
+button {
+    font-weight: 900;
 }
 
 .alternative {
@@ -96,6 +109,10 @@ h2 {
 input,
 select {
     padding: 10px;
+    background-color: rgba(185, 201, 255, 255);
+    border-radius: 5px;
+    border-color: transparent;
+    outline: none;
 }
 
 input.ng-invalid.ng-touched {

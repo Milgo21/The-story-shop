@@ -1,1 +1,117 @@
-<p>registration works!</p>
+<!-- <div class="topmaincontent" id="topmaincontent">
+    <header>
+        <div id="logoheader">
+          
+            <div class="logodiv">
+                <a href="./home.html"><img src="../../../icons/logo.png"></a>
+            </div>
+
+            <div class="accountdiv">
+                <div class="accounticon">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <b>Account</b>
+                </div>
+                <div class="shoppingicon">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                    <b>Shopping</b>
+
+                </div>
+                <div class="shoppingicon">
+                    <a href="./signup.html">Sign Up</a>
+
+                </div>
+            </div>
+
+        </div>
+        <hr>
+
+    </header>
+
+
+</div> -->
+
+<div class="maincontainer">
+    <div class="content">
+        <div class="imgDiv">
+            <img id="woman" src="../../../assets/images/bluewoman.jpeg">
+
+        </div>
+
+        <div class="formDiv">
+
+            <form class="form" [formGroup]="form" (ngSubmit)="submitData()">
+                <div class="top">
+                    <img id="logo" src="../../../assets/icons/logo.png" alt="logo">
+                    <h3>REGISTER BELOW:</h3>
+
+                </div>
+                <div formGroupName="personalDetails">
+
+                    <div class="form-group">
+
+                        <input type="text" name="firstname" formControlName="firstname" placeholder="First Name">
+                        <span class="error"
+                            *ngIf="!form.get('firstname')?.valid && form.get('firstname')?.touched">Please
+                            Enter a Valid Name</span>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="text" name="lastname" formControlName="lastname" placeholder="Last Name">
+                        <span class="error" *ngIf="!form.get('lastname')?.valid && form.get('lastname')?.touched">Please
+                            Enter a Valid Name</span>
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="email" name="email" required formControlName="email" placeholder="Email">
+                        <span class="error" *ngIf="!form.get('email')?.valid && form.get('email')?.touched">
+                            <span class="error" *ngIf="form.get('email')!.errors!['required']">Please Input an
+                                Email</span>
+                            <span class="error" *ngIf="form.get('email')!.errors!['email']">Please Enter a Valid
+                                Email</span>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <input type="text" name="username" formControlName="username" placeholder="Username">
+                    <span class="error" *ngIf="!form.get('lastname')?.valid && form.get('lastname')?.touched">Please
+                        Enter a Valid Name</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Password" formControlName="password" required
+                        pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$' />
+                    <span class="error" *ngIf="!form.get('password')?.valid && form.get('password')?.touched">Please
+                        Enter a Valid Password</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="confirmpassword" placeholder="Confirm Password"
+                        formControlName="confirmpassword" required
+                        pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$' />
+                    <span class="error"
+                        *ngIf="!form.get('confirmpassword')?.valid && form.get('confirmpassword')?.touched">Please
+                        Enter a Valid Password</span>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="register" [disabled]="!form.valid"
+                        [ngClass]="{invalid:!form.valid, valid:form.valid}">REGISTER</button>
+
+                </div>
+                <div class="alternative">
+                    <p>OR</p>
+                    <p>Already a User? <a href="login.html">Login</a></p>
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

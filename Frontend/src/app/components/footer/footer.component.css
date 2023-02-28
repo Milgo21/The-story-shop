@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(97,132,220);
+    display: flex;
+    padding: 30px;
+    gap:20px;
+    /* width: 80%; */
+    justify-content: space-between;
+    border-radius: 10px;
+
+
+}
+
+li{
+list-style: none;
+}
+.end{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}

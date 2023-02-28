@@ -1,0 +1,25 @@
+nav{
+    background-color: rgb(97,132,220);
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+nav .first ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .second ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+}

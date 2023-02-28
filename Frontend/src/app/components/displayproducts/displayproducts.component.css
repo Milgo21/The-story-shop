@@ -4,11 +4,23 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    background-color: rgba(185, 201, 255, 255);
-    width: 98vw;
+.topmain {
+    background-color: rgba(185, 201, 255, 255); 
+    display: flex;
+    justify-content: center;
+
 }
 
+.topmaincontent {
+    /* background-color: blue; */
+    width: 70%;
+    height: 80%;
+    margin-top: 20px;
+}
+header{
+    background-color: rgba(185, 201, 255, 255);
+    border-radius: 20px;
+}
 
 .logoheader {
     display: flex;
@@ -26,7 +38,7 @@ header {
 
 .searchdiv {
     display: flex;
-    gap: 20px;
+    gap: 0px;
     align-items: center;
 }
 
@@ -55,14 +67,15 @@ header {
     margin-top: 30px;
 }
 
-.navbar a:visited {
+/* .navbar a:visited {
     color: black;
-}
+} */
 
 .navbar a {
     /* color: rgb(24, 165, 190); */
     text-decoration: none;
     text-transform: uppercase;
+    color: black;
 }
 
 .navbar a:hover {
@@ -83,15 +96,20 @@ header {
     width: 100%;
 }
 
+
+body {
+    background-color: white;
+}
+
 .newbooksdiv {
     height: 90vh;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     display: flex;
     justify-content: center;
 }
 
 .newbooks {
-    width: 70%;
+    width: 80%;
     height: 100%;
 }
 
@@ -102,6 +120,7 @@ header {
 
 .newbookstitle h2 {
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -112,19 +131,39 @@ header {
 .allbooks {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: red; */
     gap: 10px;
 }
 
 .book {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+}
+.book:hover{
+    opacity: 0.6;
+   
 }
 
+.add{
+    padding: 0.5rem;
+    background-color: rgba(185, 201, 255, 255);
+    border: transparent;
+    border-radius: 0.5rem;
+    width: 100px;
+}
+.add:hover {
+    color: white;
+    background-color: black;
+}
 
 .footer {
     background-color: rgba(185, 201, 255, 255);
     border-radius: 100px;
+    margin-top: 200px;
 }
 
 .footertext {
@@ -169,6 +208,7 @@ header {
 .customerservices a:hover {
     color: white;
 }
+
 
 .footericons {
     display: flex;

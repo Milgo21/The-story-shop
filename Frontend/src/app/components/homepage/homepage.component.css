@@ -1,0 +1,150 @@
+
+.collections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 60vh;
+    background-color: inherit;
+    padding: 70px;
+}
+
+.coll {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.passionwithin img {
+    width: 30vw;
+    height: 40vh;
+}
+
+.authorsdiv {
+    /* background-color: blue; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.authors {
+    /* background-color: aqua; */
+    width: 70%;
+    height: 100%;
+}
+.authorslist {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 80px;
+}
+.popularauthors {
+    margin-top: 40px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#verticaltext {
+    width: 500px;
+    font-size: x-large;
+    margin-top: 240px;
+    margin-left: -1050px;
+    position: absolute;
+    text-align: center;
+    transform: rotate(-90deg);
+}
+
+.section1 img {
+    width: 350px;
+    height: 100%;
+}
+
+.section3 img {
+    width: 350px;
+    height: 100%;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section2 img {
+    width: 250px;
+    height: 48%;
+
+}
+
+.harrypotterback {
+    /* width:100vw ;*/
+    height: 120vh;
+    margin-top: 15%;
+    background: url('../../../assets/images/greenharrypotter.jpg');
+    background-size: 100% 100%;
+
+}
+
+.harrypotter {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-left: 800px;
+
+}
+
+.harrypotterlogo img {
+    width: 70%;
+}
+
+.logobackground {
+    height: 300px;
+    filter: blur(4px);
+    
+}
+#seecollection {
+    padding: 10px;
+    width: 30%;
+    color: black;
+    background-color: white;
+    border-color: transparent;
+}
+
+.bestsellersdiv {
+    height: 60vh;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.bestsellerstitle h2 {
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 3%;
+}
+
+.upperdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.bestsellers {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.bestsellers img {
+    width: 228px;
+    height: 228px;
+}
+
+.best {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

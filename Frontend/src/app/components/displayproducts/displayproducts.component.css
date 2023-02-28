@@ -1,0 +1,192 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: rgba(185, 201, 255, 255);
+    width: 98vw;
+}
+
+
+.logoheader {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+
+}
+
+.logoheader img {
+    width: 300px;
+
+}
+
+.searchdiv {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.searchdiv input {
+
+    border-radius: 2px;
+    border-color: transparent;
+}
+
+.accountdiv {
+    display: flex;
+    gap: 20px;
+}
+
+.accounticon,
+.shoppingicon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.navbar a:visited {
+    color: black;
+}
+
+.navbar a {
+    /* color: rgb(24, 165, 190); */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.navbar a:before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: rgb(24, 165, 190);
+    width: 0%;
+    transition: all ease-in-out 250ms;
+
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.newbooksdiv {
+    height: 90vh;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.newbooks {
+    width: 70%;
+    height: 100%;
+}
+
+.newbooks img {
+    width: 228px;
+    height: 228px;
+}
+
+.newbookstitle h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#allbooks {
+    margin-bottom: 20px;
+}
+
+.allbooks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.footer {
+    background-color: rgba(185, 201, 255, 255);
+    border-radius: 100px;
+}
+
+.footertext {
+    margin-top: 5%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footerlogo {
+    width: 220px;
+    height: 70px;
+}
+
+.storyshop {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: aqua; */
+
+}
+
+.catalog,
+.aboutus,
+.customerservices {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.catalog a,
+.aboutus a,
+.customerservices a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+.catalog a:hover,
+.aboutus a:hover,
+.customerservices a:hover {
+    color: white;
+}
+
+.footericons {
+    display: flex;
+    margin-left: 120px;
+    gap: 2%;
+    padding-bottom: 5%;
+}
+
+#arrow {
+    color: white;
+}
+
+.end {
+    background-color: rgba(30, 40, 50, 255);
+    color: rgba(93, 126, 242, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+}

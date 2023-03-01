@@ -15,10 +15,11 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
     providers: [],
     bootstrap: [AppComponent],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        HttpClientModule
+      BrowserModule,
+      AppRoutingModule,
+      ReactiveFormsModule,
+      HttpClientModule,
+      
     ]
 })
 export class AppModule { }

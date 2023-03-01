@@ -68,6 +68,7 @@ h2 {
     height: 460px;
 
 } */
+
 #logo {
     width: 300px;
     font-size: 900;
@@ -127,5 +128,5 @@ select.ng-invalid.ng-touched {
 }
 
 .valid {
-    background-color: cadetblue;
+    background-color: red;
 }

@@ -3,15 +3,9 @@
   <form [formGroup]="reactiveForm" (ngSubmit)="addBook()">
       <h2>Add a new book</h2>
     <div>
-      <label for="booktitle">Book title</label><br>
-      <input type="text" formControlName="booktitle">
-      <p class="error" *ngIf="reactiveForm.get('booktitle')!.touched && reactiveForm.get('booktitle')!.invalid">Please add a book title</p>
-    </div>
-    <br>
-    <div>
-      <label for="author">Author</label><br>
-      <input type="text" formControlName="author">
-      <p class="error" *ngIf="reactiveForm.get('author')!.touched && reactiveForm.get('author')!.invalid">Name the author for this book</p>
+      <label for="name">Name</label><br>
+      <input type="text" formControlName="name">
+      <p class="error" *ngIf="reactiveForm.get('name')!.touched && reactiveForm.get('name')!.invalid">Please add a book title</p>
     </div>
     <br>
     <div>
@@ -19,19 +13,26 @@
       <input type="text" formControlName="description">
       <p class="error" *ngIf="reactiveForm.get('description')!.touched && reactiveForm.get('description')!.invalid">Add a description for the book</p>
     </div>
-    <br>
-    <div>
-      <label for="image">Book Image</label><br>
-      <input type="text" formControlName="image">
-      <p class="error" *ngIf="reactiveForm.get('image')!.touched && reactiveForm.get('image')!.invalid">Book image cannot be empty</p>
-    </div>
-    <br>
+  <br>
     <div>
       <label for="price">Price</label><br>
       <input type="text" formControlName="price">
       <p class="error" *ngIf="reactiveForm.get('price')!.touched && reactiveForm.get('price')!.invalid">Price cannot be empty</p>
     </div>
     <br>
+    <div>
+      <label for="category_id">Category_id</label><br>
+      <input type="text" formControlName="category_id">
+      <p class="error" *ngIf="reactiveForm.get('category_id')!.touched && reactiveForm.get('category_id')!.invalid">Name the author for this book</p>
+    </div>
+    <br>
+    <div>
+      <label for="product_image_url">Image URL</label><br>
+      <input type="text" formControlName="product_image_url">
+      <p class="error" *ngIf="reactiveForm.get('product_image_url')!.touched && reactiveForm.get('product_image_url')!.invalid">Book image cannot be empty</p>
+    </div>
+    <br>
+
     <div>
       <input type="submit" value="Add book" [disabled]="!reactiveForm.valid">
     </div>

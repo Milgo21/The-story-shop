@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Book } from 'src/app/interfaces/interfaces';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -10,10 +11,23 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
-Books:Book[]=[]
-constructor(private service:ProductService){
+export class ProductsComponent implements OnInit{
 
-  this.Books = this.service.Books
+  books:Book[]=[]
+
+  constructor( private productService:ProductService, private router:Router, private route:ActivatedRoute){}
+
+  ngOnInit(): void {
+    this.productService.getBooks().subscribe((books)=>{
+      this.books=books
+      console.log(this.books)
+
+    })
+  }
+
+  deleteBook(id:any){
+    this.productService.deleteBook(id)
+  }
 }
-}
+
+

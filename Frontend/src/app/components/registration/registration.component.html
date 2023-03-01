@@ -23,7 +23,7 @@
                 </div>
                 <!-- <div formGroupName="personalDetails"> -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
 
                     <input type="text" name="firstname" formControlName="firstname" placeholder="First Name">
                     <span class="error" *ngIf="!form.get('firstname')?.valid && form.get('firstname')?.touched">Please
@@ -34,7 +34,7 @@
                     <input type="text" name="lastname" formControlName="lastname" placeholder="Last Name">
                     <span class="error" *ngIf="!form.get('lastname')?.valid && form.get('lastname')?.touched">Please
                         Enter a Valid LastName</span>
-                </div>
+                </div> -->
 
                 <div class="form-group">
 
@@ -47,35 +47,35 @@
                     </span>
                 </div>
                 <!-- </div> -->
-
+                <div class="form-group">
+                  <input type="password" name="password" placeholder="Password" formControlName="password" required
+                      pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$' />
+                  <span class="error" *ngIf="!form.get('password')?.valid && form.get('password')?.touched">Please
+                      Enter a Valid Password</span>
+              </div>
 
 
                 <div class="form-group">
 
-                    <input type="text" name="username" formControlName="username" placeholder="Username">
-                    <span class="error" *ngIf="!form.get('username')?.valid && form.get('username')?.touched">Please
-                        Enter a Valid Username</span>
+                    <input type="text" name="phone" formControlName="phone" placeholder="phone">
+                    <span class="error" *ngIf="!form.get('phone')?.valid && form.get('phone')?.touched">Please
+                        Enter a Valid phone</span>
                 </div>
 
-                <div class="form-group">
-                    <input type="password" name="password" placeholder="Password" formControlName="password" required
-                        pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$' />
-                    <span class="error" *ngIf="!form.get('password')?.valid && form.get('password')?.touched">Please
-                        Enter a Valid Password</span>
-                </div>
 
-                <div class="form-group">
+
+                <!-- <div class="form-group">
                     <input type="password" name="confirmpassword" placeholder="Confirm Password"
                         formControlName="confirmpassword" required
                         pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$' />
                     <span class="error"
                         *ngIf="!form.get('confirmpassword')?.valid && form.get('confirmpassword')?.touched">Please
                         Enter a Valid Password</span>
-                </div>
-
+                </div> -->
+                <!-- [disabled]="!form.valid" -->
 
                 <div class="form-group">
-                    <button type="submit" class="register" [disabled]="!form.valid"
+                    <button type="submit" class="register"
                         [ngClass]="{invalid:!form.valid, valid:form.valid}">REGISTER</button>
 
                 </div>

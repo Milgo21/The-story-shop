@@ -13,7 +13,7 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  user: User = { firstname: '', lastname: '', username: '', email: '', password: '' };
+  user: User = { email: '',phone: '', password: '' };
   error = '';
   form!: FormGroup
 
@@ -21,36 +21,36 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      // personalDetails: new FormGroup({
-      firstname: new FormControl(null, [Validators.required]),
-      lastname: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.email]),
-      // }),
-      username: new FormControl(null, [Validators.required]),
-      password: new FormControl(null, [Validators.required]),
-      confirmpassword: new FormControl(null, [Validators.required]),
+      phone: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required])
 
     })
   }
 
   submitData(): void {
+    console.log(this.form.value);
+
     this.userService.register(this.form.value).subscribe(response=>{
+
       console.log(response);
-      
+      this.router.navigate(['']);
+
+
     })
+
+
+    }
+
+  }
+
     // this.userService.register(this.form.value).subscribe(response=>{
     //   user => {
     //     localStorage.setItem('currentUser', JSON.stringify(user));
-    //     this.router.navigate(['']);
+        // this.router.navigate(['']);
     //   },
     //   error => {
     //     this.error = error;
     //   }
     // )
-
-    }
-       
-  }
-
-
 

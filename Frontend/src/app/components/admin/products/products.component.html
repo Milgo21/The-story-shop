@@ -5,13 +5,12 @@
   <th>Price</th>
   <th>Update</th>
   <th>Delete</th>
-  <tr *ngFor="let b of Books" class="book">
-    <td>{{b.booktitle}}</td>
-    <td>{{b.author}}</td>
+  <tr *ngFor="let b of books" class="book">
+    <td>{{b.name}}</td>
     <td>{{b.description}}</td>
     <td>{{b.price | currency}}</td>
     <td class="td-btn"><button>Update</button></td>
-    <td class="td-btn"><button>Delete</button></td>
+    <td class="td-btn" (click)="deleteBook(b.id)"><button>Delete</button></td>
   </tr>
 
 </table>

@@ -1,20 +1,40 @@
 
 <nav>
-    <div class="first">
-            <ul>
-                <li> <a href="#" style="padding-top: 50px;"> Account </a></li>
-                <li> <img src="../../../assets/icons/logo.png" alt="" style="height: 50px;"></li>
-                <li> <a href="#" style="padding-top: 50px;"> Shipping </a></li>
-            </ul>
+  <div class="logoheader">
+    <!-- <div class="searchdiv">
+        <ion-icon name="search-outline"></ion-icon>
+        <div id="input" class="input-group mx-auto col-lg-6 col-md-8 col-sm-12">
+            <input id="search-box" type="text" class="form-control"
+                placeholder="Search Books!...">
+            <button id="search" class="btn btn-primary" onclick="">Search</button>
+        </div>
+    </div> -->
+    <div class="logodiv">
+        <img src="../../../assets/icons/logo.png">
     </div>
+
+    <div class="accountdiv">
+        <div class="accounticon">
+            <!-- <ion-icon name="person-outline"></ion-icon> -->
+            <b>Account</b>
+        </div>
+        <div class="shoppingicon">
+            <!-- <ion-icon name="bag-handle-outline"></ion-icon> -->
+            <b>Shopping</b>
+
+        </div>
+    </div>
+
+</div>
 
     <div class="second">
         <ul>
-            <li> <a href=""> HOME </a></li>
-            <li> <a href=""> PRODUCTS </a></li>
-            <li> <a href="">LOGIN </a></li>
-            <li> <a href=""> CART </a></li>
+            <li> <a routerLink=""> HOME </a></li>
+            <li> <a routerLink="/products"> SHOP </a></li>
+            <li> <a routerLink="/register"> REGISTER </a></li>
+            <li> <a routerLink="/login"> LOGIN </a></li>
+            <li> <a routerLink="/cart"> CART </a></li>
         </ul>
-        
+
     </div>
 </nav>

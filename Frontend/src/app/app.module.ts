@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        CartPageComponent
+      
     ],
     providers: [],
     bootstrap: [AppComponent],
@@ -19,7 +21,9 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
       AppRoutingModule,
       ReactiveFormsModule,
       HttpClientModule,
-      
+      HeaderComponent,
+      FooterComponent
+
     ]
 })
 export class AppModule { }

@@ -1,17 +1,20 @@
 export interface Book {
-  booktitle: string
-  author: string
+  id?: string
+  name: string
   description: string
-  image: string
   price: string
+  category_id: string
+  product_image_url:string
 }
 
 export interface User {
   id?: number;
-  firstname: string;
-  lastname: string;
   email: string;
-  username: string;
+  phone: string;
   password: string;
   token?: string;
+}
+export interface logUser{
+  email:string
+  password:string
 }

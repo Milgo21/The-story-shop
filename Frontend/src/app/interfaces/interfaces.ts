@@ -12,7 +12,12 @@ export interface User {
   email: string;
   phone: string;
   password: string;
-  token?: string;
+
+}
+export interface Login{
+  email:string;
+  role:string;
+  token:string
 }
 export interface logUser{
   email:string

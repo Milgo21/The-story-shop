@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
-  Books:Book[] = []
+  Books: Book[] = []
 
 
   constructor( private http: HttpClient){ }

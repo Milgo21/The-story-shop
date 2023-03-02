@@ -29,12 +29,12 @@
 
     <div class="second">
         <ul>
-            <li> <a *ngIf="auth.isLoggedIn" routerLink="" routerLinkActive="active"> HOME </a></li>
-            <li> <a *ngIf="auth.isLoggedIn" routerLink="/products" routerLinkActive="active"> SHOP </a></li>
-            <li> <a *ngIf="!auth.isLoggedIn" routerLink="/register" routerLinkActive="active"> REGISTER </a></li>
-            <li> <a *ngIf="!auth.isLoggedIn" routerLink="/login" routerLinkActive="active"> LOGIN </a></li>
-            <li> <a *ngIf="auth.isLoggedIn" routerLink="/cart" routerLinkActive="active"> CART </a></li>
-            <li> <a *ngIf="auth.isLoggedIn" routerLink="/login" routerLinkActive="active" (click)="logout()"> LOGOUT </a></li>
+            <li> <a *ngIf="!auth.isLoggedIn" routerLink="" routerLinkActive="active"> HOME </a></li>
+            <li> <a *ngIf="!auth.isLoggedIn" routerLink="/products" routerLinkActive="active"> SHOP </a></li>
+            <li> <a *ngIf="auth.isLoggedIn" routerLink="/register" routerLinkActive="active"> REGISTER </a></li>
+            <li> <a *ngIf="auth.isLoggedIn" routerLink="/login" routerLinkActive="active"> LOGIN </a></li>
+            <li> <a *ngIf="!auth.isLoggedIn" routerLink="/cart" routerLinkActive="active"> CART </a></li>
+            <li> <a *ngIf="!auth.isLoggedIn" routerLink="/login" routerLinkActive="active" (click)="logout()"> LOGOUT </a></li>
         </ul>
 
     </div>

@@ -6,11 +6,11 @@ import { Book } from '../interfaces/interfaces';
 })
 export class ProductService {
 
-  Books:Book[] = []
+  Books: Book[] = []
 
 
   constructor() { }
-  addNewBook(addedBook:Book){
+  addNewBook(addedBook: Book) {
     this.Books.push(addedBook);
   }
 }

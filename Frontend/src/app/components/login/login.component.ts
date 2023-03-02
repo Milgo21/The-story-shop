@@ -4,6 +4,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router, RouterModule } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from 'src/app/interfaces/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   error = '';
   form!: FormGroup
 
-  constructor(private router: Router, private userService: UsersService) { }
+  constructor(private router: Router, private userService: UsersService, private auth:AuthService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -27,19 +28,32 @@ export class LoginComponent implements OnInit {
     })
   }
   
-
-  submitData(): void {
-    this.userService.login(this.user.email, this.user.password)
-      .subscribe(
-        user => {
-          localStorage.setItem('currentUser', JSON.stringify(user));
-          this.router.navigate(['']);
-        },
-        error => {
-          this.error = error;
-        }
-      );
+  submitData(){
+    this.userService.login(this.user.email, this.user.password).subscribe(response=>{
+      this.auth.setRole(response.role)
+      this.auth.setEmail(response.email)
+      this.auth.login()
+      localStorage.setItem('token', response.token)
+      console.log(response);
+      if(response.token){
+        this.router.navigate([''])
+      }
+      
+    })
   }
+
+  // submitData(): void {
+  //   this.userService.login(this.user.email, this.user.password)
+  //     .subscribe(
+  //       user => {
+  //         localStorage.setItem('currentUser', JSON.stringify(user));
+  //         this.router.navigate(['']);
+  //       },
+  //       error => {
+  //         this.error = error;
+  //       }
+  //     );
+  // }
 }
  
 

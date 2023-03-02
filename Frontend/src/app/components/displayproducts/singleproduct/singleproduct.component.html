@@ -2,20 +2,17 @@
 
 <div class="bookView">
   <div class="bookView-container">
+
     <div class="book-img">
-      <img src="../../images/Becoming-Michelle Obama 2.svg" alt="Becoming">
+      <img src='{{books!.product_image_url}}' alt="{{books!.name}}">
     </div>
 
     <div class="description">
-      <p>
-        In a life filled with meaning and accomplishment, Michelle Obama has emerged as one of the most iconic
-        and compelling women of our era. As First Lady of the United States of America—the first African American
-        to serve in that role—she helped create the most welcoming and inclusive White House in history, while also
-        establishing herself as a powerful advocate for women and girls in the U.S. and around the world, dramatically
-        changing the ways that families pursue healthier and more active lives, and standing with her husband as he
-        led America through some of its most harrowing moments.
-      </p>
-      <p id="price">$20.20</p>
+                    <p><b>{{books!.name}}</b></p>
+                    <p>{{books!.description}}</p>
+                    <p id="price">{{books!.price | currency}}</p>
+                    <br>
+                    <button class="add" (click)="addToCart(book)" >Add To Cart</button>
     </div>
   </div>
 </div>

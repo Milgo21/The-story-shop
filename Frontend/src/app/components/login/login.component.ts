@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
-import { logUser } from 'src/app/interfaces/interfaces';
+import { logUser, User } from 'src/app/interfaces/interfaces';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: logUser = {email: '', password: '' };
+  user: User = {email: '', password: '', phone:''};
   error = '';
   form!: FormGroup
 
@@ -30,11 +30,13 @@ export class LoginComponent implements OnInit {
 
 
   submitData(): void {
+    // this.userService.login(this.form.value.email,this.form.value.password);
     console.log(this.form)
     this.userService.login(this.form.value)
       .subscribe(
         user => {
-          localStorage.setItem('currentUser', JSON.stringify(user));
+          localStorage.setItem('currentUser', JSON.stringify({}));
+          // localStorage.setItem('token',user)
           this.router.navigate(['']);
         },
         error => {
@@ -42,19 +44,19 @@ export class LoginComponent implements OnInit {
         }
       );
   }
-  submitData2(): void {
-    console.log(this.form.value);
+  // submitData2(): void {
+  //   console.log(this.form.value);
 
-    this.userService.register(this.form.value).subscribe(response=>{
+  //   this.userService.register(this.form.value).subscribe(response=>{
 
-      console.log(response);
-      this.router.navigate(['']);
-
-
-    })
+  //     console.log(response);
+  //     this.router.navigate(['']);
 
 
-    }
+  //   })
+
+
+  //   }
 }
 
 

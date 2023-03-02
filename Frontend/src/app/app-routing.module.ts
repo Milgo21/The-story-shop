@@ -8,7 +8,11 @@ const routes: Routes = [
   { path: 'login', loadComponent: () => import('./components/login/login.component').then(l => l.LoginComponent) },
   { path: 'register', loadComponent: () => import('./components/registration/registration.component').then(r => r.RegistrationComponent) },
   { path: 'cart', loadComponent: () => import('./components/cart-page/cart-page.component').then(c => c.CartPageComponent) },
-  { path: 'products', loadComponent: () => import('./components/displayproducts/displayproducts.component').then(d => d.DisplayproductsComponent) },
+  { path: 'products', loadComponent: () => import('./components/displayproducts/displayproducts.component').then(d => d.DisplayproductsComponent),
+   children:[
+  {path:"id", loadComponent:() => import ( './components/displayproducts/singleproduct/singleproduct.component').then(s=>s.SingleproductComponent)}
+]
+},
   {
     path: 'admin', loadComponent: () => import('./components/admin/admin.component').then(c => c.AdminComponent),
     children: [

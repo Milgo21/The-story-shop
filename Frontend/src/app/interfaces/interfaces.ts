@@ -1,4 +1,5 @@
 export interface Book {
+  // subscribe(): unknown
   id?: string
   name: string
   description: string
@@ -20,6 +21,13 @@ export interface Login{
   token:string
 }
 export interface logUser{
+  token(arg0: string, token: any): unknown
   email:string
   password:string
+}
+export interface Cart{
+  id:string
+  user_id:string
+  product_id:string
+  quantity:number
 }

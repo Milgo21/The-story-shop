@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   Books: Book[] = []
+  singleBook:Book[]=[]
 
 
   constructor( private http: HttpClient){ }
@@ -24,8 +25,14 @@ export class ProductService {
     return this.http.get<Book[]>('http://localhost:4000/api/products')
     }
 
-  getOneBook(id:string){
-    return this.Books.find(x=>x.id === id) as Book
+  getOneBook(id:any): Observable<Book>{
+    // this.books = this.books.filter(x => x.id === id)
+    // console.log(this.books)
+
+    // return this.Books.find(x=>x.id === id) as Book
+    return this.http.get<Book>(`http://localhost:4000/api/products/${id}`)
+    
+
   }
   getBookByCategory(category_name:string):Book[]{
     let x = this.Books.filter(x => x.category_id === category_name)
@@ -42,7 +49,6 @@ export class ProductService {
   deleteBook(id:any):Observable<Book>{
     // return this.Books
     // console.log(id);
-
     return this.http.delete<Book>(`http://localhost:4000/api/products/${id}`)
     }
 }

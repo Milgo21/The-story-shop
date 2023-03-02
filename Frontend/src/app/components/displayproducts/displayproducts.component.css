@@ -5,7 +5,7 @@
 }
 
 .topmain {
-    background-color: rgba(185, 201, 255, 255); 
+    background-color: rgba(185, 201, 255, 255);
     display: flex;
     justify-content: center;
 
@@ -145,7 +145,7 @@ body {
 }
 .book:hover{
     opacity: 0.6;
-   
+
 }
 
 .add{

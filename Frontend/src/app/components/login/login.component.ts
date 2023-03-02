@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
-import { User } from 'src/app/interfaces/interfaces';
+import { logUser } from 'src/app/interfaces/interfaces';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: User = { firstname:'', lastname:'', email: '', username:'', password: '' };
+  user: logUser = {email: '', password: '' };
   error = '';
   form!: FormGroup
 
@@ -23,38 +23,39 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required])
 
     })
   }
-  
-  submitData(){
-    this.userService.login(this.user.email, this.user.password).subscribe(response=>{
-      this.auth.setRole(response.role)
-      this.auth.setEmail(response.email)
-      this.auth.login()
-      localStorage.setItem('token', response.token)
+
+
+  submitData(): void {
+    console.log(this.form)
+    this.userService.login(this.form.value)
+      .subscribe(
+        user => {
+          localStorage.setItem('currentUser', JSON.stringify(user));
+          this.router.navigate(['']);
+        },
+        error => {
+          this.error = error;
+        }
+      );
+  }
+  submitData2(): void {
+    console.log(this.form.value);
+
+    this.userService.register(this.form.value).subscribe(response=>{
+
       console.log(response);
-      if(response.token){
-        this.router.navigate([''])
-      }
-      
-    })
-  }
+      this.router.navigate(['']);
 
-  // submitData(): void {
-  //   this.userService.login(this.user.email, this.user.password)
-  //     .subscribe(
-  //       user => {
-  //         localStorage.setItem('currentUser', JSON.stringify(user));
-  //         this.router.navigate(['']);
-  //       },
-  //       error => {
-  //         this.error = error;
-  //       }
-  //     );
-  // }
+
+    })
+
+
+    }
 }
- 
+
 
 

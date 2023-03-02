@@ -1,5 +1,5 @@
 nav{
-    background-color: rgb(97,132,220);
+    background-color: rgb(185, 201, 255);
     display: flex;
     flex-direction: column;
     gap:30px;
@@ -17,9 +17,50 @@ nav .first ul{
 
 nav .second ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
 }
 
 li{
     list-style: none;
+}
+.logoheader {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+}
+
+.logoheader img {
+  width: 300px;
+
+}
+
+.searchdiv {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+}
+
+.searchdiv input {
+
+  border-radius: 2px;
+  border-color: transparent;
+}
+
+.accountdiv {
+  display: flex;
+  gap: 20px;
+}
+
+.accounticon,
+.shoppingicon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.active{
+  background-color: blueviolet;
 }

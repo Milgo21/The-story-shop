@@ -11,30 +11,6 @@ export class AuthService {
   constructor() { }
 
   isLoggedIn = false
-  private email = ''
-  private role = ''
-  private token = ''
-
-  getEmail() {
-    return this.email
-  }
-
-  getRole() {
-    return this.role
-  }
-  // getToken() {
-  //   return this.token
-  // }
-
-  setEmail(email: string) {
-    this.email = email
-  }
-  setRole(role: string) {
-    this.role = role
-  }
-  // setToken(token: string) {
-  //   this.token = token
-  // }
 
   getauthStatus(): Promise<boolean> {
     const promise = new Promise<boolean>((resolve, reject) => {

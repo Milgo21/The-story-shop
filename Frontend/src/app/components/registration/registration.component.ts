@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { User } from 'src/app/interfaces/interfaces';
+import { AuthService } from 'src/app/services/auth.service';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -36,6 +37,7 @@ export class RegistrationComponent implements OnInit {
   submitData(): void {
     this.userService.register(this.form.value).subscribe(response=>{
       console.log(response);
+      this.router.navigate(['login'])
       
     })
     // this.userService.register(this.form.value).subscribe(response=>{

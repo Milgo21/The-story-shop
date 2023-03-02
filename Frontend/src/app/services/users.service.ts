@@ -21,8 +21,8 @@ export class UsersService {
     // return this.http.post<User>('http://localhost:4000/users/register', user)
   }
 
-  login(email: string, password: string): Observable<logUser> {
-    return this.http.post<logUser>('http://localhost:4000/api/users/login', { email, password });
+  login(user:logUser): Observable<logUser> {
+    return this.http.post<logUser>('http://localhost:4000/api/users/login', user);
   }
 
   getUsers():Observable<User[]>{

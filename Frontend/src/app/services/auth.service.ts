@@ -9,7 +9,7 @@ export class AuthService {
 
   constructor() { }
 
-  isLoggedIn = false
+  isLoggedIn = true
 
   getauthStatus():Promise<boolean>{
     const promise = new Promise<boolean>((resolve,reject)=>{

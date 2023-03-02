@@ -35,8 +35,14 @@ export class ProductService {
     let index = this.Books.findIndex(x =>x.id === id)
     this.Books[index] = newBook
   }
-  deleteBook(id:any){
-    let index = this.Books.findIndex(x =>x.id === id)
-    this.Books.splice(index,1)
-  }
+  // deleteBook(id:any){
+  //   let index = this.Books.findIndex(x =>x.id === id)
+  //   this.Books.splice(index,1)
+  // }
+  deleteBook(id:any):Observable<Book>{
+    // return this.Books
+    // console.log(id);
+
+    return this.http.delete<Book>(`http://localhost:4000/api/products/${id}`)
+    }
 }

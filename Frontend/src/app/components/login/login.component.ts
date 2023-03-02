@@ -22,14 +22,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, [Validators.required]),
+      password: new FormControl(null, [Validators.required])
 
     })
   }
 
 
   submitData(): void {
-    this.userService.login(this.user.email, this.user.password)
+    console.log(this.form)
+    this.userService.login(this.form.value)
       .subscribe(
         user => {
           localStorage.setItem('currentUser', JSON.stringify(user));

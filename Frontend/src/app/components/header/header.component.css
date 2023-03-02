@@ -17,7 +17,8 @@ nav .first ul{
 
 nav .second ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
 }
 
 li{
@@ -59,4 +60,7 @@ li{
   display: flex;
   align-items: center;
   gap: 10px;
+}
+.active{
+  background-color: blueviolet;
 }

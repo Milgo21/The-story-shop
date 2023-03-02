@@ -26,7 +26,8 @@ export class ProductsComponent implements OnInit{
   }
 
   deleteBook(id:any){
-    this.productService.deleteBook(id)
+    this.productService.deleteBook(id).subscribe()
+    this.books = this.books.filter(x => x.id !== id);
   }
 }
 

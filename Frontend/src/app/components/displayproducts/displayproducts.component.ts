@@ -27,18 +27,20 @@ export class DisplayproductsComponent implements OnInit {
   }
   viewBook(id:any){
     this.productService.getOneBook(id).subscribe()
-    let filteredBook = this.books.findIndex(x => x.id === id)
+    let filteredBook = this.books.filter(x => x.id === id)
+    this.productService.selectedBook(filteredBook);
     // filteredBook = this.productService.singleBook
     // this.productService.singleBook = filteredBook
-    console.log(filteredBook);
-    // this.router.navigate(['id'], {relativeTo:this.route});
+    // console.log(filteredBook);
+    // this.router.navigate(['id',filteredBook[0].id ], {relativeTo:this.route});
+    // this.router.navigate([filteredBook[0].id])
   }
-  
+
 
   addToCart(book:Book){
     this.cart.addToCart(book).subscribe(res=>{
       console.log(res);
-      
+
     })
   }
 

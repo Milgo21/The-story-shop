@@ -21,13 +21,12 @@ export interface Login{
   token:string
 }
 export interface logUser{
-  token(arg0: string, token: any): unknown
-  email:string
-  password:string
+  token: string
+  user: {}
 }
 export interface Cart{
   id:string
-  user_id:string
   product_id:string
   quantity:number
+  user_id:string
 }

@@ -12,12 +12,21 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./cart-page.component.css']
 })
 export class CartPageComponent implements OnInit{
-  cartItem!:Cart
+  cartItem:any[]=[]
   constructor( private cartService:CartService, private route:Router){}
   ngOnInit(): void {
     this.cartService.getCartItems().subscribe(res=>{
+
       console.log(res);
-      
+      this.cartItem = res
+
+
     })
+  }
+  getProductDetails(){
+
+  }
+  checkout(){
+    this.cartService.checkout()
   }
 }

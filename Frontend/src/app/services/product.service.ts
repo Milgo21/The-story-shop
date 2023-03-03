@@ -31,7 +31,7 @@ export class ProductService {
 
     // return this.Books.find(x=>x.id === id) as Book
     return this.http.get<Book>(`http://localhost:4000/api/products/${id}`)
-    
+
 
   }
   getBookByCategory(category_name:string):Book[]{
@@ -50,5 +50,9 @@ export class ProductService {
     // return this.Books
     // console.log(id);
     return this.http.delete<Book>(`http://localhost:4000/api/products/${id}`)
+    }
+
+    selectedBook(book: Book[]){
+      this.singleBook = book;
     }
 }

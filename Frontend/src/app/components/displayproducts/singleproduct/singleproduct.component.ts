@@ -26,11 +26,12 @@ ngOnInit(): void {
 
 viewBook(){
   const id = (this.route.snapshot.paramMap.get('id'));
+  // this.productService.singleBook
   this.productService.getOneBook(id).subscribe((books)=>{
     this.books=books
   })
   // console.log(this.books);
-  
+
   // this.books = this.books.filter(x => x.id === this.id)
   // this.router.navigate(['id'], {relativeTo:this.route});
 }
@@ -38,7 +39,7 @@ viewBook(){
 addToCart(book:Book){
   this.cartService.addToCart(book).subscribe(res=>{
     console.log(res);
-    
+
   })
 }
   // viewBook(){

@@ -14,11 +14,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: logUser = {email: '', password: '' };
+  user: logUser = { email: '', password: '' };
   error = '';
   form!: FormGroup
 
-  constructor(private router: Router, private userService: UsersService, private auth:AuthService) { }
+  constructor(private router: Router, private userService: UsersService, private auth: AuthService) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
   submitData2(): void {
     console.log(this.form.value);
 
-    this.userService.register(this.form.value).subscribe(response=>{
+    this.userService.register(this.form.value).subscribe(response => {
 
       console.log(response);
       this.router.navigate(['']);
@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
     })
 
 
-    }
+  }
 }
 
 

@@ -9,10 +9,11 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 
+
 @NgModule({
     declarations: [
         AppComponent,
-      
+        
     ],
     providers: [],
     bootstrap: [AppComponent],

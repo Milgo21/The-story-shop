@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'login', loadComponent: () => import('./components/login/login.component').then(l => l.LoginComponent) },
   { path: 'register', loadComponent: () => import('./components/registration/registration.component').then(r => r.RegistrationComponent) },
   { path: 'cart', loadComponent: () => import('./components/cart-page/cart-page.component').then(c => c.CartPageComponent) },
-  { path: 'products', loadComponent: () => import('./components/displayproducts/displayproducts.component').then(d => d.DisplayproductsComponent) },
+  { path: 'products', canActivate:[AuthGuardService],loadComponent: () => import('./components/displayproducts/displayproducts.component').then(d => d.DisplayproductsComponent) },
   {
     path: 'admin', loadComponent: () => import('./components/admin/admin.component').then(c => c.AdminComponent),
     children: [
@@ -18,6 +18,7 @@ const routes: Routes = [
       { path: 'add-product', loadComponent: () => import('./components/admin/addproduct/addproduct.component').then(c => c.AddproductComponent) }
     ]
   },
+  { path: '**', loadComponent: () => import('./components/page-not-found/page-not-found.component').then(p => p.PageNotFoundComponent) },
 
 
 ];

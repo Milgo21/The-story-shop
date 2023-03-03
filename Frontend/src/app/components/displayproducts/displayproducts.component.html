@@ -15,7 +15,7 @@
         <header>
 
             <!-- <hr> -->
-            <div class="navbar">
+            <!-- <div class="navbar">
                 <a href="category.html" class="romance"> Romance</a>
                 <a href="category.html" class="romance"> Horror</a>
                 <a href="category.html" class="romance"> Adventure</a>
@@ -24,7 +24,7 @@
                 <a href="category.html" class="romance"> Historical</a>
                 <a href="category.html" class="romance"> Self-Help</a>
 
-            </div>
+            </div> -->
         </header>
     </div>
 
@@ -39,13 +39,14 @@
 
             <!-- <p id="allbooks"><b>All Books</b></p> -->
             <div class="allbooks" *ngIf="books.length>0; else nothing">
-                <div class="book" *ngFor="let book of books">
+                <div class="book" *ngFor="let book of books"
+                (click)="viewBook(book.id)">
 
                     <img src='{{book.product_image_url}}'>
                     <p><b>{{book.name}}</b></p>
                     <p><b>{{book.price | currency}}</b></p>
                     <!-- <button class="add" (click)="viewBook(book.id)">View More</button> -->
-                    <button class="add">Add To Cart</button>
+                    <button class="add" (click)="addToCart(book)">Add To Cart</button>
                 </div>
 
             </div>
@@ -113,3 +114,4 @@
 </body>
 
 </html>
+<router-outlet></router-outlet>

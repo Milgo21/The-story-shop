@@ -12,7 +12,7 @@ export class AuthGuardService implements CanActivate {
   constructor(private authService: AuthService, private router: Router) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
    return this.authService.getauthStatus().then((status:boolean)=>{
-    if(status){
+    if(localStorage.getItem('token') != undefined){
       return true
     }
     else{

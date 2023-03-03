@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SingleproductComponent } from './components/displayproducts/singleproduct/singleproduct.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
       ReactiveFormsModule,
       HttpClientModule,
       HeaderComponent,
-      FooterComponent
+      FooterComponent,
+      SingleproductComponent
 
     ]
 })

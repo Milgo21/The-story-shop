@@ -20,6 +20,9 @@
         <div class="total-amount">
           <h4>{{ c.quantity * c.price }}</h4>
         </div>
+        <div>
+          <button (click)="removeItem(c.id)">Remove</button>
+        </div>
       </div>
     </div>
     <!-- Book 2 -->

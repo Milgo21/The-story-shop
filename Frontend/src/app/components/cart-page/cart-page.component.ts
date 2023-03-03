@@ -31,7 +31,11 @@ export class CartPageComponent implements OnInit{
   }
   checkout(){
     this.cartService.checkout()
-  }
 
+  }
+  removeItem(id:number){
+    this.cartService.removeFromCart(id).subscribe()
+    this.cartItem = this.cartItem.filter(x => x.id !== id);
+  }
 
 }

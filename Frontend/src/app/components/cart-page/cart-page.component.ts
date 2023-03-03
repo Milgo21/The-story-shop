@@ -13,13 +13,16 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class CartPageComponent implements OnInit{
   cartItem:any[]=[]
+  productsTotals: number = 0;
   constructor( private cartService:CartService, private route:Router){}
   ngOnInit(): void {
     this.cartService.getCartItems().subscribe(res=>{
 
       console.log(res);
       this.cartItem = res
-
+      this.cartItem.forEach(item => {
+        this.productsTotals += item.price*item.quantity;
+      })
 
     })
   }
@@ -29,4 +32,6 @@ export class CartPageComponent implements OnInit{
   checkout(){
     this.cartService.checkout()
   }
+
+
 }

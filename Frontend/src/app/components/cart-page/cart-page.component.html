@@ -5,20 +5,20 @@
     <!-- Book 1 -->
     <div class="book" *ngFor="let c of cartItem">
       <div class="book-image">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/41VH33HEACL.jpg" alt="">
+        <img src="{{ c.product_image_url }}" alt="" />
       </div>
       <div class="book-description">
         <div class="title">
-          <h3>{{c.product_id}}</h3>
+          <h3>{{ c.name }}</h3>
           <p>Home Delivery</p>
           <div class="quantity">
             <div class="minus">-</div>
-            <div class="no">{{c.quantity}}</div>
+            <div class="no">{{ c.quantity }}</div>
             <div class="add">+</div>
           </div>
         </div>
         <div class="total-amount">
-          <h4>{{c.quantity * 500}}</h4>
+          <h4>{{ c.quantity * c.price }}</h4>
         </div>
       </div>
     </div>
@@ -64,20 +64,19 @@
         </div>
       </div>
     </div> -->
-
   </div>
-  <div class="cart-amount">
-      <div class="subtotal-amount">
-          <div>Subtotal</div>
-          <div><h2>$9000</h2></div>
-      </div>
-      <div class="check-out">
-        <button (click)="checkout()">Checkout</button>
-      </div>
-      <div class="captcha">
-        <p>This site is protected by</p>
-        <p>Google policy</p>
-        <p>T&Cs Apply</p>
-      </div>
+  <div class="cart-amount" *ngIf="cartItem.length > 0">
+    <div class="subtotal-amount">
+      <div>Subtotal</div>
+      <div><h2>{{productsTotals | currency}}</h2></div>
+    </div>
+    <div class="check-out">
+      <button (click)="checkout()">Checkout</button>
+    </div>
+    <div class="captcha">
+      <p>This site is protected by</p>
+      <p>Google policy</p>
+      <p>T&Cs Apply</p>
+    </div>
   </div>
 </div>
